@@ -91,19 +91,19 @@ h2 {
     margin-bottom: 20px;
 }
 
-.carrusel{
+.carrusel-container{
     position: relative;
     overflow: hidden;
     width: 100%;
     margin: 30px 0;
     padding: 0 50px;
 }
-.carrusel div{
+.carrusel-track{
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: fit-content;
 }
-.card-destino {
+.card {
     min-width: 300px;
     margin: 0 15px;
     background: white;
@@ -114,17 +114,15 @@ h2 {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card-destino:hover {
+.card:hover {
     transform:  translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.card-destino:nth-child(1) .card-bg {background-image: url('/img/merloMirador.webp');}
-.card-destino:nth-child(2) .card-bg {background-image: url('/img/imgHeader.png');}
-.card-destino:nth-child(3) .card-bg {background-image: url('/img/cataratas-scaled.jpg');}
 
-.card-bg {
+.card img {
     height: 180px;
+    width: 360px;
     background-size: cover;
     background-position: center;
 }

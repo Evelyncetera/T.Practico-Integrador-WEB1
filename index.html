@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agencia Turismo - Conociendo Argentina</title>
     <link href="style.css" rel="stylesheet">
+    
 </head>
 <body>
     <header>
@@ -30,35 +31,56 @@
             <h2>Destinos destacados</h2>
             <p>Descubrí nuestras mejores ofertas en paquetes turísticos.</p>
 
-            <div class="carrusel">
-                <div>
-                    <a href="destino-merlo.html" class="card-destino">
-                        <div class="card-bg"></div>
-                            <div class="card-info">
-                                <h3>Merlo, San Luis</h3>
-                                <h5>El microclima ideal.</h5>
-                                <h2>$ 249.900</h2>
-                                <p>Tarifa por Persona</p>
-                            </div>
-                    </a>
-                    <a href="destino-bariloche.html" class="card-destino">
-                        <div class="card-bg"></div>
-                            <div class="card-info">
-                                <h3>Bariloche, Río Negro</h3>
-                                <h5>Patagonia y Aventura.</h5>
-                                <h2>$ 449.900</h2>
-                                <p>Tarifa por Persona</p>
-                            </div>
-                    </a>
-                    <a href="destino-iguazu.html" class="card-destino">
-                        <div class="card-bg"></div>
-                            <div class="card-info">
-                                <h3>Cataratas del Iguazú, Misiones</h3>
-                                <h5>Maravilla Natural.</h5>
-                                <h2>$ 328.900</h2>
-                                <p>Tarifa por Persona</p>
-                            </div>
-                    </a>
+            <div class="carrusel-container">
+                <div class="carrusel-track">
+
+                    <div class="card">
+                        <a href="destino-merlo.html" class="card-destino">
+                            <img src="./img/merloMirador.webp" alt="Foto de Merlo" />
+                                <div class="card-info">
+                                    <h3>Merlo, San Luis</h3>
+                                    <h5>El microclima ideal.</h5>
+                                    <h2>$ 249.900</h2>
+                                    <p>Tarifa por Persona</p>
+                                </div>
+                        </a>
+                    </div>
+
+                    <div class="card">                        
+                        <a href="destino-bariloche.html" class="card-destino">
+                            <img src="./img/bariloche.jpg" alt="Foto de Bariloche" />
+                                <div class="card-info">
+                                    <h3>Bariloche, Río Negro</h3>
+                                    <h5>Patagonia y Aventura.</h5>
+                                    <h2>$ 449.900</h2>
+                                    <p>Tarifa por Persona</p>
+                                </div>
+                        </a>
+                    </div>
+
+                    <div class="card">                        
+                        <a href="destino-iguazu.html" class="card-destino">
+                            <img src="./img/cataratas-scaled.jpg" alt="Foto de Cataratas" />
+                                <div class="card-info">
+                                    <h3>Cataratas del Iguazú, Misiones</h3>
+                                    <h5>Maravilla Natural.</h5>
+                                    <h2>$ 328.900</h2>
+                                    <p>Tarifa por Persona</p>
+                                </div>
+                        </a>
+                    </div>
+
+                    <div class="card">                        
+                        <a href="destino-ushuaia.html" class="card-destino">
+                            <img src="./img/ushuaia.jpg" alt="Foto de Ushuaia" />
+                                <div class="card-info">
+                                    <h3>Ushuaia, Tierra del Fuego</h3>
+                                    <h5>Patagonia Extrema.</h5>
+                                    <h2>$ 547.900</h2>
+                                    <p>Tarifa por Persona</p>
+                                </div>
+                        </a>
+                    </div>
                 </div>
 
                 <button id="btn-prev" class="carrusel-btn"> < </button>
@@ -74,4 +96,5 @@
 
     <script></script>
 </body>
+<script src="script.js"></script>
 </html>
