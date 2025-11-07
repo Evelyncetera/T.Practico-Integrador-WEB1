@@ -197,3 +197,87 @@ footer {
     color: #e9ecef;
     font-size: 0.8em;
 }
+
+/*------------------------Paginas HIJAS--------------------*/
+.header-img-merlo,
+.header-img-bariloche,
+.header-img-cataratas,
+.header-img-ushuaia {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: darken;
+
+}
+.info-contenedor {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+.info-destino{
+    flex: 2;
+    padding-right: 20px;
+}
+
+ul {
+    margin-top: 10px;
+    list-style-type: square;
+    padding-left: 0;
+    text-align: left;
+}
+
+.info-paquete {
+    flex: 3;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+.btn-reserva {
+    display: inline-block;
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+}
+
+.btn-reserva:hover {
+    background-color: #c82333;
+}
+/*------------------------Merlo--------------------*/
+
+.header-img-merlo{
+    background-image: url('img/merloMirador.webp');
+}
+
+/*------------------------Bariloche--------------------*/
+
+.header-img-bariloche{
+    background-image: url('img/bariloche.jpg');
+}
+
+/*------------------------CATARATAS--------------------*/
+
+.header-img-cataratas{
+    background-image: url('img/cataratas-scaled.jpg');
+}
+
+/*-------------------------USHUAIA--------------------*/
+
+.header-ushuaia{
+    background-image: url('img/ushuaia.jpg');
+}
+
