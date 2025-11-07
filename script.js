@@ -1,44 +1,89 @@
-// 1. Obtener elementos
 const track = document.querySelector('.carrusel-track');
 const cards = document.querySelectorAll('.card');
 const nextBtn = document.getElementById('btn-next');
 const prevBtn = document.getElementById('btn-prev');
+const cardLink = document.getElementById('card-link');
+const cardImg = document.getElementById('card-img');
+const cardTitulo = document.getElementById('card-titulo');
+const cardSubtitulo = document.getElementById('card-subtitulo');
+const cardPrecio = document.getElementById('card-precio');
+const currentCard = document.getElementById('current-card');
 
-// 2. Variables de estado
-let currentIndex = 0; // Índice de la tarjeta actualmente visible
-const cardWidth = cards[0].offsetWidth + 20; // Ancho de la tarjeta + su margen (10px a cada lado = 20px)
-const totalCards = cards.length;
 
-console.log(totalCards);
+let indice = 0; 
 
-// 3. Función para mover el carrusel
-function updateCarousel() {
-    // Calcula cuánto se debe desplazar el track.
-    // El desplazamiento es el índice actual * el ancho de una tarjeta.
-    const offset = -currentIndex * cardWidth;
-    
-    // Aplica el desplazamiento usando transform: translateX
-    track.style.transform = `translateX(${offset}px)`;
 
-    // Opcional: Desactivar botones en los límites
-    prevBtn.disabled = currentIndex === 0;
-    nextBtn.disabled = currentIndex >= totalCards - 1; // Ajustar si quieres mostrar varias tarjetas
+const destinos = [
+        {
+            href: 'destino-iguazu.html',
+            img: './img/cataratas-scaled.jpg', 
+            titulo: 'Cataratas del Iguazú, Misiones',
+            subtitulo: 'Maravilla Natural.',
+            precio: '$ 328.900'
+        },
+        {   
+            href: 'destino-merlo.html',
+            img: './img/merloMirador.webp',
+            titulo: 'Merlo, San Luis',
+            subtitulo: 'El microclima ideal.',
+            precio: '$ 249.900'
+        },
+        {
+            href: 'destino-bariloche.html',
+            img: './img/bariloche.jpg',
+            titulo: 'Bariloche, Río Negro',
+            subtitulo: 'Patagonia y Aventura.',
+            precio: '$ 449.900'
+        },
+        {
+            href: 'destino-ushuaia.html',
+            img: 'img/ushuaia.jpg',
+            titulo: 'Ushuaia, Tierra del Fuego',
+            subtitulo: 'Patagonia Extrema.',
+            precio: '$ 547.900'
+        }
+    ];
+
+
+function actualizarCarrusel(){
+
+    currentCard.classList.add('hidden');
+
+    setTimeout(() => {
+        const destino = destinos[indice];
+
+        cardLink.href = destino.href;
+        cardImg.src = destino.img;
+        cardImg.alt = destino.imgAlt;
+        cardTitulo.textContent = destino.titulo;
+        cardSubtitulo.textContent = destino.subtitulo;
+        cardPrecio.textContent = destino.precio;
+
+        currentCard.classList.remove('hidden');
+
+    }, 300);
 }
 
-// 4. Manejadores de eventos
+
 nextBtn.addEventListener('click', () => {
-    if (currentIndex < totalCards - 1) { // Asegura no ir más allá del final
-        currentIndex++;
-        updateCarousel();
+   
+    indice++;
+    if(indice > destinos.length - 1){
+        indice = 0;
     }
+    
+    actualizarCarrusel();
+
 });
 
 prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) { // Asegura no ir antes del inicio
-        currentIndex--;
-        updateCarousel();
+  
+    indice--;
+    if(indice < 0){
+        indice = destinos.length -1;
     }
+    actualizarCarrusel();
+
 });
 
-// 5. Inicializar el estado (desactiva el botón 'Anterior' al inicio)
-updateCarousel();
+actualizarCarrusel();

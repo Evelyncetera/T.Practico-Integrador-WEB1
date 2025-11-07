@@ -92,26 +92,29 @@ h2 {
 }
 
 .carrusel-container{
+    height: 60vw;
+    width: 65vw;
+    margin: 20px auto;
+    overflow: hidden; 
     position: relative;
-    overflow: hidden;
-    width: 100%;
-    margin: 30px 0;
-    padding: 0 50px;
+    
 }
-.carrusel-track{
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: fit-content;
-}
+
 .card {
-    min-width: 300px;
-    margin: 0 15px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    margin: 0 auto;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     position: relative;
-    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+
+.card.hidden {
+    opacity: 0;
+    pointer-events: none; 
 }
 
 .card:hover {
@@ -121,8 +124,8 @@ h2 {
 
 
 .card img {
-    height: 180px;
-    width: 360px;
+    height: 35vw;
+    width: 65vw;
     background-size: cover;
     background-position: center;
 }
@@ -159,7 +162,7 @@ h2 {
 .carrusel-btn {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+   
     background: #1a237e;
     color: white;
     border: none;
