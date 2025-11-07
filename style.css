@@ -9,10 +9,12 @@ Texto: #333333
     margin: 0;
     padding: 0;
 }
+
 body{
     background-color: #f8f9fa;
     font-family:'Times New Roman', Times, serif;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -43,11 +45,12 @@ header{
     position: relative;
     z-index: 10;
     padding: 20px 40px;
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
 }
+
 h1 {
     font-size: 2em;
     text-align: center;
@@ -57,9 +60,9 @@ h1 {
 }
 
 nav{
-    display: flex;
+    display: flexbox;
     font-weight: 600;
-    padding: 8px 15px;
+    margin-top: 200px;
     border-radius: 5px;
 }
 
@@ -117,10 +120,7 @@ h2 {
     pointer-events: none; 
 }
 
-.card:hover {
-    transform:  translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
+
 
 
 .card img {
@@ -161,8 +161,8 @@ h2 {
 
 .carrusel-btn {
     position: absolute;
-    top: 50%;
-    background: #1a237e;
+    top: 30%;
+    background-color: grey;
     color: white;
     border: none;
     cursor: pointer;
@@ -263,13 +263,6 @@ h2 {
     background-color: #0056b3;
 }
 
-/* Estilo para los mensajes de error (ocultos por defecto) */
-.error-msj {
-    color: #dc3545; 
-    font-size: 0.85em;
-    margin-top: 5px;
-    min-height: 18px;
-}
 
 footer {
     text-align: center;
