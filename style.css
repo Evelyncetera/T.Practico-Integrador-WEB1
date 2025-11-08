@@ -55,27 +55,30 @@ header{
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     text-align: center;
     margin-top: 0;
-    padding-bottom: 30px;
+    
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-nav{
-    display: flexbox;
-    flex-basis: 1;
-    margin-top: 210px;
+.main-nav{
+    display: flex;
+    justify-content: center;
+    margin-top: 15vw;
+    
     font-weight: 600;
     width: 100%;
-    padding: 8px 15px;
+    
     border-radius: 5px;
 }
 
 nav a {
+    
     color: white;
     font-weight: 600;
-    padding: 8px 15px;
+    font-size: 25px;
+    padding: 0px 15px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
@@ -94,17 +97,18 @@ main > section {
     border-bottom: 1px solid #ccc;
     margin-bottom: 40px;
 }
+
 h2 {
     color: #1D3557;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2.2em;
+    font-size: 3em;
 }
 
 .carrusel-container{
-    height: 60vw;
+    
     width: 65vw;
-    margin: 20px auto;
+    margin: 0px auto;
     overflow: hidden; 
     position: relative;
     
@@ -128,7 +132,9 @@ h2 {
 }
 
 
-
+ p, li {
+    font-size: 35px;
+}
 
 .card img {
     height: 35vw;
@@ -145,25 +151,29 @@ h2 {
 .card-info h3 {
     margin: 0; 
     color: #1D3557; 
-    font-size: 1.2em;
+    font-size: 2.5em;
 }
 
 .card-info h5 {
     margin: 5px 0;
     color: #6c757d;
-    font-size: 0.9em;
+    font-size: 1.8em;
 }
 
 .card-info h2 {
     margin: 10px 0;
     color: #1D3557;
-    font-size: 1.8em;
+    font-size: 2em;
 }
 
 .card-info p {
     margin: 0;
-    font-size: 0.8em;
+    font-size: 1.5em;
     color: #6c757d;
+}
+
+card-titulo{
+    font-size: 20px;
 }
 
 .carrusel-btn {
@@ -199,7 +209,7 @@ h2 {
 .section-form {
     background-color: #F1FAEE;
     padding: 60px 20px;
-    margin-top: 40px;
+    
     text-align: center;
 }
 
@@ -342,7 +352,7 @@ ul {
 }
 
 .paquete-img {
-    height: 150px;
+    height: 30vh;
     width: 100%;
     background-size: cover;
     background-position: center;
