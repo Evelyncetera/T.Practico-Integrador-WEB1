@@ -1,7 +1,8 @@
 /* Colorcitos: 
-Azul Marino (Header/Menú): #1A237E
-Azul Claro (Botones/Destacados): #007BFF
-Fondo General: #f8f9fa
+Azul medio (Header/ principal): #1D3557 
+Azul Claro (Botones/links): #457B9D
+Amarillo clarito (Ofertas) #FCD05D
+Blanco medio grisaseo (Fondo General): #F1FAEE
 Texto: #333333
 */
 /* --------------------------PRINCIPAL----------------------------------- */
@@ -10,7 +11,7 @@ Texto: #333333
     padding: 0;
 }
 body{
-    background-color: #f8f9fa;
+    background-color: #F1FAEE;
     font-family:'Times New Roman', Times, serif;
 }
 a {
@@ -43,22 +44,26 @@ header{
     position: relative;
     z-index: 10;
     padding: 20px 40px;
-    display: flex;
+    display: flexbox;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+    color: white;
 }
 h1 {
-    font-size: 2em;
+    font-size: 3em;
     text-align: center;
-    margin-top: auto;
+    margin-top: 0;
     padding-bottom: 30px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 nav{
-    display: flex;
+    display: flexbox;
+    flex-basis: 1;
+    margin-top: 210px;
     font-weight: 600;
+    width: 100%;
     padding: 8px 15px;
     border-radius: 5px;
 }
@@ -71,7 +76,7 @@ nav a {
     transition: background-color 0.3s;
 }
 nav a:hover {
-    background-color: rgba(0, 123, 255, 0.7);
+    background-color: #457B9D;
 }
 
 main {
@@ -86,9 +91,10 @@ main > section {
     margin-bottom: 40px;
 }
 h2 {
-    color: #1A237E;
+    color: #1D3557;
     text-align: center;
     margin-bottom: 20px;
+    font-size: 2.2em;
 }
 
 .carrusel-container{
@@ -137,7 +143,7 @@ h2 {
 
 .card-info h3 {
     margin: 0; 
-    color: #007bff; 
+    color: #1D3557; 
     font-size: 1.2em;
 }
 
@@ -149,7 +155,7 @@ h2 {
 
 .card-info h2 {
     margin: 10px 0;
-    color: #dc3545;
+    color: #1D3557;
     font-size: 1.8em;
 }
 
@@ -162,7 +168,7 @@ h2 {
 .carrusel-btn {
     position: absolute;
     top: 50%;
-    background: #1a237e;
+    background: #1D3557;
     color: white;
     border: none;
     cursor: pointer;
@@ -179,7 +185,7 @@ h2 {
 }
 
 .carrusel-btn:hover {
-    background: #007bff;
+    background: #457B9D;
 }
 
 #btn-prev {
@@ -190,7 +196,7 @@ h2 {
 }
 
 .section-form {
-    background-color: #e9ecef;
+    background-color: #F1FAEE;
     padding: 60px 20px;
     margin-top: 40px;
     text-align: center;
@@ -198,7 +204,7 @@ h2 {
 
 .section-form h2, 
 .section-form p {
-    color: #1a237e;
+    color: #1D3557;
     margin-bottom: 20px;
 }
 
@@ -249,7 +255,7 @@ h2 {
 .form-flex button[type="submit"] {
     width: 50%;
     padding: 15px;
-    background-color: #007BFF;
+    background-color: #457B9D;
     color: white;
     border: none;
     border-radius: 5px;
@@ -260,10 +266,10 @@ h2 {
 }
 
 .form-flex button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #1D3557;
 }
 
-/* Estilo para los mensajes de error (ocultos por defecto) */
+
 .error-msj {
     color: #dc3545; 
     font-size: 0.85em;
@@ -309,45 +315,61 @@ footer {
 
 ul {
     margin-top: 10px;
-    list-style-type: square;
+    list-style-type: none;
     padding-left: 0;
     text-align: left;
 }
 
 .info-paquete {
-    flex: 3;
+    flex: 2;
     background-color: white;
-    padding: 20px;
+    min-width: 250px;
+    padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    background-color: white; 
+    overflow: hidden;
 
 }
 .btn-reserva {
     display: inline-block;
-    background-color: #dc3545;
-    color: white;
+    background-color: #FCD05D;
+    color: #1D3557;
     padding: 10px 20px;
     border-radius: 5px;
     margin-top: 15px;
     font-weight: bold;
-    transition: background-color 0.3s;
 
 }
 
 .btn-reserva:hover {
-    background-color: #c82333;
+    background-color: #f7bb3c;
 }
+
+.paquete-img {
+    height: 150px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+}
+
 /*------------------------Merlo--------------------*/
 
 .header-img-merlo{
     background-image: url('img/merloMirador.webp');
 }
-
+.merlo .paquete-img {
+    background-image: url('./img/SaltoDelTigre.jpg');
+}
 /*------------------------Bariloche--------------------*/
 
 .header-img-bariloche{
     background-image: url('img/bariloche.jpg');
+}
+.bariloche .paquete-img {
+    background-image: url('./img/bariloche.jpg');
 }
 
 /*------------------------CATARATAS--------------------*/
@@ -355,10 +377,16 @@ ul {
 .header-img-cataratas{
     background-image: url('img/cataratas-scaled.jpg');
 }
+.cataratas .paquete-img{
+    background-image: url('img/cataratas-scaled.jpg');
 
+}
 /*-------------------------USHUAIA--------------------*/
 
-.header-ushuaia{
+.header-img-ushuaia{
     background-image: url('img/ushuaia.jpg');
 }
+.ushuaia .paquete-img{
+    background-image: url('img/ushuaia.jpg');
 
+}
