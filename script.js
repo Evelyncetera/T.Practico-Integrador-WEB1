@@ -1,3 +1,4 @@
+// TODO LO QUE ES CARRUSEL
 const track = document.querySelector('.carrusel-track');
 const cards = document.querySelectorAll('.card');
 const nextBtn = document.getElementById('btn-next');
@@ -61,7 +62,7 @@ function actualizarCarrusel(){
 
         currentCard.classList.remove('hidden');
 
-    }, 300);
+    }, 200);
 }
 
 
@@ -87,3 +88,78 @@ prevBtn.addEventListener('click', () => {
 });
 
 actualizarCarrusel();
+
+
+
+
+
+// VALIDACIONES FORMULARIO
+function validarForm(e){
+    e.preventDefault();
+
+    const form = e.target;
+    const nombre = document.getElementById('nombre');
+    const email = document.getElementById('email');
+    const tel = document.getElementById('telefono');
+    const consulta = document.getElementById('consulta');
+    const fomrExitoso = document.getElementById('form-exitoso');
+
+    const mensajeAnterior = form.querySelector(".mensaje-error, .mensaje-exito");
+   
+    const emailRegex = /^[a-zA-Z0-9._-]+[@]{1}[a-zA-Z]+[.]{1}[a-zA-Z._-]{2,5}$/;
+    const telRegex = /\d/g;
+
+    let errores = [];
+
+    
+
+    if (mensajeAnterior) {
+    form.removeChild(mensajeAnterior);
+    }
+
+    if(nombre.value.length < 3 || nombre.value.length > 15) {
+    errores.push('El nombre de usuario debe tener entre 3 y 15 caracteres.');
+    }
+
+    if(!emailRegex.test(email.value)) {
+    errores.push('Formato de email inválido.');
+    }
+
+    if(!telRegex.test(tel.value) || tel.value.length < 8){
+        errores.push('Ingrese sólo números en campo Teléfono (mínimo 8 caracteres)');
+    }
+    
+
+    if(consulta.value > 200 || consulta.value < 5){
+        errores.push('Ingrese una consulta (entre 5 y 200 caracteres).');
+    }
+
+
+    if(errores.length > 0){
+        const lista = document.createElement("ul");
+        lista.className = "mensaje-error";
+        lista.style.color = "red";
+        lista.innerHTML = errores.map(e => `<li>${e}</li>`).join("");
+        form.appendChild(lista);
+    } else {
+        const d = document.createElement("div");
+        const p = document.createElement("p");
+
+
+        d.className = "mensaje-exito";
+        d.style.backgroundColor = "#0056b3";
+        d.style.padding = "10px";
+        d.style.borderRadius = "5px";
+        
+        p.style.fontSize = "30px"
+        p.style.color = "white";
+        p.textContent = `${nombre.value}, gracias por tu consulta!! 
+        En breve nos comunicaremos al número ${tel.value}.`;
+        
+        d.appendChild(p);
+        form.appendChild(d);
+    }
+
+}
+
+
