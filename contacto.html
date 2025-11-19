@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia Turismo - Conociendo Argentina</title>
+    <link href="style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Agencia Turismo - Conociendo Argentina</h1>
+
+            <nav class="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#destinos">Destinos</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+        <div class="imagen-header"></div>
+    </header>
+    <!--Formulario-->
+    <section id="seccion-contacto-form" class="section-form">
+        <h2>¿Tenés alguna consulta? ¡Contactanos!</h2>
+        <p>Completá el siguiente formulario y un agente se pondrá en contacto a la brevedad.</p>
+        
+        <form action="" novalidate onsubmit="return validarForm(event)" class="form-flex" action="" >
+            
+            <div class="form-grupo">
+                <label for="nombre">Nombre Completo (*)</label>
+                <input type="text" id="nombre" name="nombre"  >
+                
+            </div>
+            
+            <div class="form-grupo">
+                <label for="email">Email (*)</label>
+                <input type="email" id="email" name="email" placeholder="Ej: usuario@dominio.com" >
+                
+            </div>
+            
+            <div class="form-grupo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: 3511234567">
+                
+            </div>
+            
+            <div class="form-grupo form-consulta">
+                <label for="consulta">Tu Consulta o Mensaje (*)</label>
+                <textarea id="consulta" name="consulta" rows="5" ></textarea>
+                
+            </div>
+            <div class="form-btn-submit">
+                <button type="submit" id="btn-submit">Enviar Consulta</button>
+            </div>    
+        </form>
+        
+    </section>
+    <footer>
+        <p>&copy; 2025 Agencia Turismo. Todos los derechos reservados.</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
